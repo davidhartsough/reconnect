@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reconnection Reminder</title>
+    <style>
+      :root {
+        --font-family: ui-sans-serif, system-ui, -apple-system,
+          "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
+          "Noto Sans", sans-serif;
+        --background: #f8f9fa;
+        --foreground: #101214;
+        --theme: #1471eb;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background: #101214;
+          --foreground: #f8f9fa;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      :root,
+      html,
+      body,
+      textarea,
+      button {
+        color: var(--foreground);
+        background: var(--background);
+        font-family: var(--font-family);
+        line-height: 1.5;
+      }
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="root"></main>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
