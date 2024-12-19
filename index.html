@@ -2,22 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reconnection Reminder</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="canonical" href="https://reconnection.netlify.app/" />
+    <meta
+      name="description"
+      content="Friendly reminders to reconnect with friends"
+    />
+    <meta name="author" content="David Hartsough" />
+    <meta name="application-name" content="Reconnection Reminder" />
+    <meta name="theme-color" content="#121212" />
+    <link rel="manifest" href="/manifest.json" />
     <style>
       :root {
         --font-family: ui-sans-serif, system-ui, -apple-system,
           "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
           "Noto Sans", sans-serif;
-        --background: #f8f9fa;
-        --foreground: #101214;
+        --bg: #f8f9fa;
+        --fg: #101214;
         --theme: #1471eb;
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --background: #101214;
-          --foreground: #f8f9fa;
+          --bg: #101214;
+          --fg: #f8f9fa;
         }
       }
       * {
@@ -28,8 +39,8 @@
       body,
       textarea,
       button {
-        color: var(--foreground);
-        background: var(--background);
+        color: var(--fg);
+        background: var(--bg);
         font-family: var(--font-family);
         line-height: 1.5;
       }
