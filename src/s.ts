@@ -53,7 +53,12 @@ export function getTodaysItem(): string {
   const { index, date, prev } = getDailyState();
   const today = getTodaysDate();
   const items = getSequence();
-  if (date === today) return prev;
+  if (date === today) {
+    if (index === 0 && prev === items[0]) {
+      setDailyState({ index: 1, date, prev });
+    }
+    return prev;
+  }
   if (index === items.length) {
     let newShuffle, first;
     do {
@@ -63,6 +68,11 @@ export function getTodaysItem(): string {
     setSequence(newShuffle);
     setDailyState({ index: 0, date: today, prev: first });
     return first;
+  }
+  if (index === 0 && prev === items[0]) {
+    const curr = items[1];
+    setDailyState({ index: 1, date: today, prev: curr });
+    return curr;
   }
   const curr = items[index];
   setDailyState({ index: index + 1, date: today, prev: curr });
