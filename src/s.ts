@@ -106,8 +106,6 @@ const prompts = [
   "Compliment _.",
   "Celebrate _.",
   "Share something with _.",
-  "Be present with _.",
-  "Give _ your full attention.",
 ];
 
 export function getPrompts(name: string) {
